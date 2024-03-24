@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Catatan</title>
+  </head>
+  <body>
+    <my-loader></my-loader>
+    <my-navbar></my-navbar>
+    <div class="main">
+      <my-head></my-head>
+
+      <!-- Content -->
+      <div class="container-c">
+        <form id="noteForm">
+          <label for="noteTitle">Judul Catatan:</label>
+          <input
+            type="text"
+            id="noteTitle"
+            name="noteTitle"
+            pattern="[a-zA-Z0-9\s]+"
+            title="Hanya boleh memasukkan huruf dan angka"
+            required
+            maxlength="120"
+          />
+
+          <label for="noteBody">Isi Catatan:</label>
+          <textarea id="noteBody" name="noteBody" required></textarea>
+
+          <button type="submit" class="createdNote">Tambah Catatan</button>
+        </form>
+        <br />
+        <button type="button" id="archive">Archive - Notes</button>
+
+        <div id="noteList" class="grid-container"></div>
+      </div>
+    </div>
+
+    <!-- Background gelap -->
+    <div id="modalBackground" class="modal-background"></div>
+
+    <!-- Modal -->
+    <div id="modalContainer" class="modal">
+      <div class="modal-content">
+        <!-- Konten grid -->
+        <div id="modalNoteList" class="modal-grid-container">
+          <!-- <div class="modal-grid-item">
+          <div>
+            <h3>Title</h3>
+            <p>coba</p>
+            <button class="modal-archive-button" onclick="archiveNote()">Archive</button>
+          </div>
+        </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <my-footer>
+      <!-- <h6 slot="created">Di buat oleh Thoriq</h6> -->
+    </my-footer>
+    <!-- <script src="./dist/bundle.js"></script> -->
+  </body>
+</html>
