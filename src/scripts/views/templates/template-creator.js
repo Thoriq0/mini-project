@@ -3,7 +3,7 @@ import CONFIG from '../../globals/config';
 const createResturantDetailTemplate = (restaurant) => `
 
   <h2 class="restaurant__title" tabindex="0" aria-label="restaurant name ${restaurant.restaurant.name}">${restaurant.restaurant.name}</h2>
-  <img class="restaurant__poster" src="${CONFIG.BASE_IMAGE_URL + restaurant.restaurant.pictureId}" alt="$${restaurant.restaurant.name}" />
+  <img id="other" class="restaurant__poster" src="${CONFIG.BASE_IMAGE_URL + restaurant.restaurant.pictureId}" alt="${restaurant.restaurant.name}" crossorigin="anonymous"/>
   <div class="restaurant__info">
     <h3 tabindex="0" aria-label="restaurant information">Information</h3>
     <h4>City</h4>
@@ -52,8 +52,8 @@ const createResturantDetailTemplate = (restaurant) => `
 const createResturantItemTemplate = (restaurant) => `
   <div class="restaurant-item">
     <div class="restaurant-item__header">
-      <img class="restaurant-item__header__poster" alt="${restaurant.name}"
-          src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" tabindex="0">
+      <img id="skip" class="restaurant-item__header__poster" alt="${restaurant.name}"
+          src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" tabindex="0" crossorigin="anonymous">
       <div class="restaurant-item__header__rating">
         <p>⭐️<span class="restaurant-item__header__rating__score" tabindex="0" aria-label="rating ${restaurant.rating}">${restaurant.rating}</span></p>
       </div>
@@ -63,7 +63,7 @@ const createResturantItemTemplate = (restaurant) => `
       <p tabindex="0" aria-label="restaurant description">${restaurant.description}</p>
     </div>
     <div class="button-item" style="text-align: center">
-      <a href="${`/#/detail/${restaurant.id}`}" aria-label="go to detail">
+      <a href="${`/#/detail/${restaurant.id}`}" aria-label="go to detail" class="linkButton">
         <custom-button></custom-button>
       </a>
     </div>

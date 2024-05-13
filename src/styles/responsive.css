@@ -63,6 +63,11 @@
   .restaurants {
     grid-template-columns: repeat(4, 1fr);
   }
+  .hero{
+    /* min-width: 1000px; */
+    margin: 0 auto 40px auto;
+    /* border-radius: 30px; */
+  }
 }
  
 @media screen and (min-width: 1600px) {

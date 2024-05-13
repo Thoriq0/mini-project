@@ -15,6 +15,12 @@ class CustomButton extends HTMLElement {
         cursor: pointer;
         width: 90%;
         margin: 5px auto 15px auto;
+        min-width: 44px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
       }
     `;
     shadow.appendChild(style);

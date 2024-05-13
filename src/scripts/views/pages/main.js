@@ -4,7 +4,6 @@ import { createResturantItemTemplate } from "../templates/template-creator";
 const Main = {
   async render() {
     return `
-      <a href="#restaurants" class="skip-link">Skip To Content</a>
       <div class="content">
       <div class="loader" id="loader"></div>
 

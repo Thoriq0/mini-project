@@ -38,6 +38,11 @@ body {
   font-size: 18px;
   padding: 8px;
   cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .app-bar .app-bar__brand {
@@ -75,6 +80,11 @@ body {
   margin-bottom: 5px;
   width: 100%;
   font-weight: bold;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 /*
@@ -82,7 +92,6 @@ body {
 */
 
 main {
-  padding: 32px;
   flex: 1;
 }
 
@@ -105,6 +114,7 @@ main {
   grid-template-columns: 1fr;
   gap: 16px;
   margin: 32px 0;
+  padding: 32px;
 }
 
 /*
@@ -188,14 +198,14 @@ main {
   hero
 */
 .hero{
-  margin-top: 10px;
+  /* margin-top: 10px; */
   background-image: url(../public/hero/hero-image_3.jpg);
   width: 100%;
-  height: 300px;
+  height: 310px;
   background-size: cover;
   background-position: center;
   align-items: center;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   margin-bottom: 70px;
 }
   /* content */
@@ -240,12 +250,21 @@ main {
   font-weight: 900;
   position: absolute;
   top: -50px;
+  outline: none;
 }
 
 .skip-link:focus {
   top: 0;
   left: 400px;
   z-index: 99999;
+}
+
+.linkButton{
+  min-width: 44px;
+  min-height: 44px;
+  width: 100%;
+  display: inline-block;
+  text-decoration: none;
 }
 
 /*
